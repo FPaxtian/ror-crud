@@ -14,11 +14,11 @@ development:
   adapter: postgresql
   encoding: utf-8
   pool: 5
-  username: rjncytozgrjwwe
-  password: c2665cbf52af0d9601cf545254591484b78d47b40626ab39b3e2c1851138ceea
-  host: ec2-34-196-231-34.compute-1.amazonaws.com
+  username: postgres
+  password: 1234
+  host: localhost
   port: 5432
-  database: d3g3gqk6qknttp
+  database: construction_company
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
