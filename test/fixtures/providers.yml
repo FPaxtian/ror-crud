@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  celphone: 1
+  name_contact: MyString
+  type_providers: 1
+  users: one
+
+two:
+  company: MyString
+  celphone: 1
+  name_contact: MyString
+  type_providers: 1
+  users: two

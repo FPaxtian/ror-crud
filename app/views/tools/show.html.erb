@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tools name:</strong>
+  <%= @tool.tools_name %>
+</p>
+
+<p>
+  <strong>Tools models:</strong>
+  <%= @tool.tools_models %>
+</p>
+
+<p>
+  <strong>Tools brands:</strong>
+  <%= @tool.tools_brands %>
+</p>
+
+<p>
+  <strong>Date acquistion:</strong>
+  <%= @tool.date_acquistion %>
+</p>
+
+<p>
+  <strong>Amount storage:</strong>
+  <%= @tool.amount_storage %>
+</p>
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>

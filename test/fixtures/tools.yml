@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tools_name: MyString
+  tools_models: MyString
+  tools_brands: MyString
+  date_acquistion: 2021-11-24
+  amount_storage: 1
+
+two:
+  tools_name: MyString
+  tools_models: MyString
+  tools_brands: MyString
+  date_acquistion: 2021-11-24
+  amount_storage: 1
