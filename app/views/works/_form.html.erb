@@ -1,0 +1,57 @@
+<%= form_with(model: work) do |form| %>
+  <% if work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+        <% work.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :works_name %>
+    <%= form.text_field :works_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :worls_desc %>
+    <%= form.text_field :worls_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_works %>
+    <%= form.number_field :type_works %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acount_woks %>
+    <%= form.text_field :acount_woks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date_works %>
+    <%= form.date_select :start_date_works %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date_works %>
+    <%= form.date_select :end_date_works %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employees_id %>
+    <%= form.text_field :employees_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
