@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  works_name: MyString
+  worls_desc: MyString
+  location: MyString
+  type_works: 1
+  acount_woks: MyString
+  start_date_works: 2021-11-24
+  end_date_works: 2021-11-24
+  employees: one
+
+two:
+  works_name: MyString
+  worls_desc: MyString
+  location: MyString
+  type_works: 1
+  acount_woks: MyString
+  start_date_works: 2021-11-24
+  end_date_works: 2021-11-24
+  employees: two

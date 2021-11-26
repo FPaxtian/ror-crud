@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Works name:</strong>
+  <%= @work.works_name %>
+</p>
+
+<p>
+  <strong>Worls desc:</strong>
+  <%= @work.worls_desc %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @work.location %>
+</p>
+
+<p>
+  <strong>Type works:</strong>
+  <%= @work.type_works %>
+</p>
+
+<p>
+  <strong>Acount woks:</strong>
+  <%= @work.acount_woks %>
+</p>
+
+<p>
+  <strong>Start date works:</strong>
+  <%= @work.start_date_works %>
+</p>
+
+<p>
+  <strong>End date works:</strong>
+  <%= @work.end_date_works %>
+</p>
+
+<p>
+  <strong>Employees:</strong>
+  <%= @work.employees_id %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
