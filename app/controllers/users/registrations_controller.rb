@@ -19,11 +19,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     type_user = @user.type_users 
 
     if type_user == 2
-      @employee = Employee.new(:users_id => id_user ,:users_id => id_user)
+      @employee = Employee.new(:id => id_user ,:users_id => id_user)
       @employee.save
     end 
     if type_user == 3
-      @provider = Provider.new(:users_id => id_user)
+      @provider = Provider.new(:id => id_user ,:users_id => id_user)
       @provider.save
     end 
 

@@ -15,8 +15,6 @@ ActiveRecord::Schema.define(version: 2021_11_24_070337) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
-  
   create_table "employees", force: :cascade do |t|
     t.bigint "employess_celphone"
     t.bigint "nss"
@@ -49,7 +47,19 @@ ActiveRecord::Schema.define(version: 2021_11_24_070337) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  
+  create_table "users", force: :cascade do |t|
+    t.string "users_name"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.integer "type_users"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
 
   create_table "works", force: :cascade do |t|
     t.string "works_name"
@@ -68,6 +78,4 @@ ActiveRecord::Schema.define(version: 2021_11_24_070337) do
   add_foreign_key "employees", "users", column: "users_id"
   add_foreign_key "providers", "users", column: "users_id"
   add_foreign_key "works", "employees", column: "employees_id"
-
-
 end

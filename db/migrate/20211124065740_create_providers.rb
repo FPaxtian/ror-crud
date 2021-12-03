@@ -1,6 +1,6 @@
 class CreateProviders < ActiveRecord::Migration[6.1]
   def change
-    create_table :providers do |t|
+    create_table :providers, primary_key: 'id' do |t|
       t.string :company
       t.bigint :celphone
       t.string :name_contact
