@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_070337) do
     t.bigint "users_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_employees_on_users_id"
+    t.index ["users_id"], name: "index_employees_on_users_id", on_delete => :cascade, :on_update => :cascade
   end
 
   create_table "providers", force: :cascade do |t|
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_070337) do
     t.bigint "users_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_providers_on_users_id"
+    t.index ["users_id"], name: "index_providers_on_users_id", on_delete => :cascade, :on_update => :cascade
   end
 
   create_table "tools", force: :cascade do |t|
