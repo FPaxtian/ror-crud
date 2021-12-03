@@ -12,8 +12,9 @@ class Users::SessionsController < Devise::SessionsController
   def create
     super
     #redirect_to users_path(:user_type => @user.type_users)
-    puts @user.type_users
-    puts "esto es un log de prueba"
+    session[:id_user] = @user.id
+    session[:type_users] = @user.type_users    
+    ##puts config.type_users
   end
 
   # DELETE /resource/sign_out

@@ -10,9 +10,24 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+
+    session[:id_user] = @user.id
+    session[:type_users] = @user.type_users
+    id_user = @user.id
+    type_user = @user.type_users 
+
+    if type_user == 2
+      @employee = Employee.new(:users_id => id_user ,:users_id => id_user)
+      @employee.save
+    end 
+    if type_user == 3
+      @provider = Provider.new(:users_id => id_user)
+      @provider.save
+    end 
+
+  end
 
   # GET /resource/edit
   # def edit

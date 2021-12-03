@@ -26,12 +26,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <p><%= f.label :type_users %><br />
-    <%= f.text_field :type_users %></p>
-  </div>
+  <%= f.select(:type_users, options_for_select([ ["Empleado", 2], ["Proveedores",3]]), {:include_blank => "Select Status"}, {class: 'form-control'}) %>  
 
-
+  <br>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
